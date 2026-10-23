@@ -81,8 +81,8 @@
     .sec-tag-icon { position: relative; width: 38px; height: 38px; flex-shrink: 0; display: inline-flex; align-items: center; justify-content: center; border: 1px solid currentColor; border-radius: 50%; box-shadow: 0 0 0 4px rgba(176,138,51,0.10); }
     .sec-tag.is-light .sec-tag-icon { box-shadow: 0 0 0 4px rgba(217,185,104,0.12); }
     .sec-tag-icon.is-mark::after { content: ''; width: 15px; height: 19px; background: currentColor; -webkit-mask: url(imgs/marca-silhueta-mask.png) center / contain no-repeat; mask: url(imgs/marca-silhueta-mask.png) center / contain no-repeat; }
-    .avl-pill, .sm-pill, .mm-pill, .enc-pill { display: inline-flex; align-items: center; gap: 9px; }
-    .avl-pill svg, .sm-pill svg, .mm-pill svg, .enc-pill svg { flex-shrink: 0; }
+    .avl-pill, .mm-pill, .enc-pill { display: inline-flex; align-items: center; gap: 9px; }
+    .avl-pill svg, .mm-pill svg, .enc-pill svg { flex-shrink: 0; }
 
     /* ─── BUTTONS ─── */
     .btn-primary {
@@ -205,46 +205,6 @@
     .avl-indicadores li { font-size: 0.8rem; color: var(--green); background: rgba(248,245,236,0.8); border: 1px solid rgba(176,138,51,0.4); padding: 6px 14px; border-radius: 999px; }
     .avl-note { margin-top: 18px; max-width: 520px; font-size: 0.78rem; line-height: 1.6; color: var(--ink-faint); }
     @media (prefers-reduced-motion: reduce) { .avl-scanner, .avl-seal-ring, .avl-marks circle, .avl-dot { animation: none; } .avl-scanner { transform: translateY(260px); } }
-
-    /* ─── BENEFÍCIO EXCLUSIVO: SÃO MIGUELITO ─── */
-    .sm-section { position: relative; overflow: hidden; background: var(--paper); border-top: 1px solid var(--border-light); }
-    .sm-section::before { content: ''; position: absolute; bottom: -30%; right: -10%; width: 700px; height: 700px; background: radial-gradient(circle, rgba(176,138,51,0.16) 0%, transparent 62%); pointer-events: none; }
-    .sm-grid { position: relative; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: 80px; align-items: center; }
-    .sm-pill { display: inline-block; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; color: var(--gold-light); background: var(--green); padding: 7px 16px; border-radius: 999px; margin-bottom: 22px; }
-    .sm-lead { margin-top: 18px; font-size: clamp(1rem, 1.6vw, 1.12rem); }
-    .sm-lead strong { color: var(--ink); font-weight: 600; }
-    .sm-list { list-style: none; margin: 34px 0 36px; display: grid; }
-    .sm-list li { display: grid; grid-template-columns: 44px 1fr; gap: 18px; padding: 18px 0; border-top: 1px solid var(--border-light); }
-    .sm-list li:last-child { border-bottom: 1px solid var(--border-light); }
-    .sm-icon { width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--gold-deep); color: var(--gold-deep); display: flex; align-items: center; justify-content: center; }
-    .sm-list h4 { font-size: 1.2rem; margin-bottom: 4px; }
-    .sm-list p { font-size: 0.92rem; }
-    .btn-ext { display: inline-flex; align-items: center; gap: 10px; }
-    .sm-ext-note { display: flex; align-items: center; gap: 6px; margin-top: 12px; font-size: 0.76rem; color: var(--ink-faint); }
-    .sm-note { margin-top: 18px; max-width: 520px; font-size: 0.78rem; line-height: 1.6; color: var(--ink-faint); }
-    .sm-visual { position: relative; max-width: 420px; width: 100%; margin: 0 auto; padding: 28px 0 56px; display: flex; flex-direction: column; align-items: center; }
-    .sm-phone { position: relative; width: 250px; aspect-ratio: 9 / 18; border-radius: 36px; border: 8px solid var(--green); background: linear-gradient(170deg, var(--green-soft), var(--green)); box-shadow: 0 40px 60px -30px rgba(21,55,42,0.65), 0 0 0 1px rgba(176,138,51,0.5); overflow: hidden; }
-    .sm-phone-notch { position: absolute; top: 8px; left: 50%; transform: translateX(-50%); width: 64px; height: 16px; background: #0c2219; border-radius: 99px; z-index: 2; }
-    .sm-screen { position: absolute; inset: 0; padding: 40px 14px 14px; display: flex; flex-direction: column; gap: 16px; }
-    .sm-video { position: relative; aspect-ratio: 16 / 11; border-radius: 10px; background: radial-gradient(circle at 50% 40%, rgba(217,185,104,0.28), rgba(217,185,104,0.04) 70%), #1a4533; border: 1px solid rgba(217,185,104,0.3); display: flex; align-items: center; justify-content: center; }
-    .sm-play { width: 52px; height: 52px; border-radius: 50%; background: var(--gold); color: var(--green); display: flex; align-items: center; justify-content: center; padding-left: 3px; animation: sm-pulse 2.4s ease-out infinite; }
-    .sm-progress { position: absolute; left: 10px; right: 10px; bottom: 9px; height: 3px; border-radius: 3px; background: rgba(248,245,236,0.2); overflow: hidden; }
-    .sm-progress i { display: block; height: 100%; width: 38%; background: var(--gold-light); animation: sm-load 6s ease-in-out infinite alternate; }
-    .sm-rows { display: grid; gap: 12px; }
-    .sm-row { display: flex; align-items: center; gap: 10px; }
-    .sm-row-dot { width: 30px; height: 30px; border-radius: 8px; background: rgba(217,185,104,0.22); border: 1px solid rgba(217,185,104,0.4); flex-shrink: 0; }
-    .sm-row-lines { display: grid; gap: 6px; flex: 1; }
-    .sm-row-lines i { display: block; height: 6px; border-radius: 6px; background: rgba(248,245,236,0.22); }
-    .sm-row-lines i + i { width: 62%; background: rgba(248,245,236,0.12); }
-    .sm-chip { position: absolute; background: var(--green); color: var(--paper); font-size: 0.78rem; letter-spacing: 0.03em; padding: 9px 18px; border-radius: 999px; box-shadow: 0 12px 28px -10px rgba(21,55,42,0.55); border: 1px solid rgba(217,185,104,0.45); }
-    .sm-chip-1 { top: 22%; left: -2%; }
-    .sm-chip-2 { top: 56%; right: -2%; }
-    .sm-lockup { position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); display: flex; align-items: center; gap: 14px; white-space: nowrap; font-family: var(--serif); font-size: 1.15rem; color: var(--ink); background: var(--paper); border: 1px solid rgba(176,138,51,0.45); padding: 10px 22px; border-radius: 999px; box-shadow: 0 14px 30px -14px rgba(21,55,42,0.4); }
-    .sm-lockup b { font-weight: 600; font-style: normal; color: var(--gold-deep); }
-    .sm-x { color: var(--gold); font-family: var(--sans); font-size: 0.9rem; }
-    @keyframes sm-pulse { 0% { box-shadow: 0 0 0 0 rgba(176,138,51,0.55); } 100% { box-shadow: 0 0 0 18px rgba(176,138,51,0); } }
-    @keyframes sm-load { from { width: 18%; } to { width: 82%; } }
-    @media (prefers-reduced-motion: reduce) { .sm-play, .sm-progress i { animation: none; } }
 
     /* ─── AÇÃO MENSAL: KIT DE MIMOS ─── */
     .mm-section { position: relative; overflow: hidden; background: var(--cream-card); border-top: 1px solid var(--border-light); }
@@ -506,7 +466,6 @@
       .garantia-wrap { flex-direction: column; text-align: center; }
       .passos { grid-template-columns: repeat(2, 1fr); }
       .avl-grid { grid-template-columns: 1fr; gap: 64px; }
-      .sm-grid { grid-template-columns: 1fr; gap: 56px; }
       .mm-cards { grid-template-columns: 1fr; max-width: 480px; }
       .mm-top { grid-template-columns: 1fr; gap: 36px; }
       .mm-photo { order: -1; max-width: 460px; margin: 0 auto; }
@@ -521,7 +480,6 @@
       body.has-sticky .float-btn { bottom: 92px; }
       footer { padding-bottom: 96px; }
       .enc-visual { max-width: 420px; }
-      .sm-visual { order: -1; }
       .avl-visual { max-width: 400px; }
       #hero::after { width: 360px; height: 360px; }
     }
@@ -532,13 +490,10 @@
       .hero-headline { font-size: clamp(2.2rem, 9vw, 3rem); }
       .avl-seal { width: 96px; height: 96px; top: -20px; left: -10px; }
       .avl-chip { font-size: 0.7rem; padding: 7px 12px; }
-      .sm-chip { font-size: 0.7rem; padding: 7px 12px; }
-      .sm-pill { font-size: 0.64rem; letter-spacing: 0.1em; padding: 7px 14px; }
       .enc-topics { grid-template-columns: 1fr; }
       .enc-bubble { font-size: 0.72rem; padding: 7px 14px; }
       .enc-bubble-2 { left: -8px; }
       .enc-bubble-1 { right: -4px; }
-      .sm-lockup { font-size: 1rem; padding: 8px 16px; gap: 10px; }
       .avl-chip-2 strong { font-size: 1.15rem; }
     }
 
@@ -571,7 +526,6 @@
     .passo-num { font-size: 2.6rem; font-weight: 500; }
     .avl-chip-2 strong { font-size: 1.1rem; }
     .avl-step-num { font-size: 1.1rem; }
-    .sm-lockup { font-size: 0.95rem; }
     .mm-card-num { font-size: 1.3rem; }
     .enc-quote { font-size: clamp(1rem, 1.8vw, 1.2rem); line-height: 1.55; }
     .depo-title { font-size: 1.2rem; font-weight: 600; }
@@ -629,7 +583,6 @@
             <li>✔️ Avaliação física online por fotos e medidas <span class="hero-bonus-tag">NOVO</span></li>
             <li>✔️ Suporte por WhatsApp durante as 8 semanas</li>
             <li>✔️ Comunidade exclusiva com desafios e prêmios <span class="hero-bonus-tag">BÔNUS</span></li>
-            <li>✔️ Desconto exclusivo em plataforma de treino online <span class="hero-bonus-tag">BÔNUS</span></li>
             <li>✔️ 100% online, sem sair de casa</li>
           </ul>
         </p>
@@ -1133,77 +1086,6 @@
 </section>
 
 <!-- ═══════════════════════════════════════
-     BENEFÍCIO EXCLUSIVO: PLATAFORMA SÃO MIGUELITO
-     Link da Hotmart incluído só no botão desta seção, a pedido do cliente (abre em nova aba, com aviso e ícone de saída).
-     O link leva cupom e código de afiliado (ref=): mantém o aviso de parceria abaixo do botão.
-     PENDENTE: Thasiany confirmar os detalhes do benefício antes de publicar.
-═══════════════════════════════════════ -->
-<section class="section sm-section" id="beneficio">
-  <div class="container">
-    <div class="sm-grid">
-
-      <div class="sm-content">
-        <div class="reveal">
-          <span class="sm-pill"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg> Benefício exclusivo para participantes</span>
-          <h2>Seu treino também faz parte da <em>transformação</em>!</h2>
-          <p class="sm-lead">As participantes do Método Slim terão acesso a um benefício exclusivo na plataforma <strong>São Miguelito</strong>, com treinos online e videoaulas para ajudar a colocar o movimento em prática.</p>
-        </div>
-        <ul class="sm-list">
-          <li class="reveal">
-            <span class="sm-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg></span>
-            <div>
-              <h4>Treinos online</h4>
-              <p>Treinos para você colocar o movimento em prática, junto com o seu plano alimentar.</p>
-            </div>
-          </li>
-          <li class="reveal">
-            <span class="sm-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="5" width="14" height="14" rx="2"/><polyline points="16 10 22 7 22 17 16 14"/></svg></span>
-            <div>
-              <h4>Videoaulas</h4>
-              <p>Aulas em vídeo que mostram como fazer, para você treinar com mais clareza.</p>
-            </div>
-          </li>
-          <li class="reveal">
-            <span class="sm-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
-            <div>
-              <h4>Rotina de exercícios organizada</h4>
-              <p>Mais recursos para organizar a sua semana e trabalhar em direção aos seus objetivos.</p>
-            </div>
-          </li>
-        </ul>
-        <div class="reveal">
-          <a href="https://pay.hotmart.com/A30685062J?off=svq1gsmq&amp;checkoutMode=10&amp;offDiscount=SM20&amp;ref=H108111791G&amp;bid=1792523104531" class="btn-primary btn-ext" target="_blank" rel="noopener noreferrer sponsored" onclick="window.gtag &amp;&amp; gtag('event','cta_sao_miguelito',{event_category:'CTA'})">Quero o benefício na São Miguelito <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
-          <p class="sm-ext-note"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Abre a plataforma São Miguelito em uma nova aba.</p>
-          <p class="sm-note">Benefício oferecido em parceria com a plataforma São Miguelito. Os treinos e as videoaulas são disponibilizados pela plataforma.</p>
-        </div>
-      </div>
-
-      <div class="sm-visual reveal" aria-hidden="true">
-        <div class="sm-phone">
-          <div class="sm-phone-notch"></div>
-          <div class="sm-screen">
-            <div class="sm-video"><span class="sm-play"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="8 5 19 12 8 19 8 5"/></svg></span><span class="sm-progress"><i></i></span></div>
-            <div class="sm-rows">
-              <div class="sm-row"><span class="sm-row-dot"></span><span class="sm-row-lines"><i></i><i></i></span></div>
-              <div class="sm-row"><span class="sm-row-dot"></span><span class="sm-row-lines"><i></i><i></i></span></div>
-              <div class="sm-row"><span class="sm-row-dot"></span><span class="sm-row-lines"><i></i><i></i></span></div>
-            </div>
-          </div>
-        </div>
-        <div class="sm-chip sm-chip-1">Treinos online</div>
-        <div class="sm-chip sm-chip-2">Videoaulas</div>
-        <div class="sm-lockup">
-          <span>Método <b>Slim</b></span>
-          <span class="sm-x">×</span>
-          <span>São <b>Miguelito</b></span>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ═══════════════════════════════════════
      AÇÃO MENSAL: KIT DE MIMOS
      PENDENTE antes de publicar: definir critérios de participação, período de apuração e regulamento da ação.
      Ação com prêmio para clientes pode exigir regulamento e, dependendo do formato, autorização: validar com jurídico.
@@ -1388,7 +1270,6 @@
         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 1 encontro ao vivo mensal com a comunidade</li>
         <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Materiais digitais e ebooks</li>
         <li class="plano-bonus"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Comunidade exclusiva + prêmios <span class="tag-bonus">BÔNUS</span></li>
-        <li class="plano-bonus"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Benefício exclusivo na plataforma de treinos São Miguelito <span class="tag-bonus">BÔNUS</span></li>
       </ul>
       <a href="https://pay.kiwify.com.br/lEVyZmD" class="btn-primary" style="width:100%; text-align:center;"
          onclick="gtag && gtag('event','cta_oferta',{event_category:'CTA'})">
@@ -1656,7 +1537,7 @@
   // NAVEGAÇÃO: link ativo + barra fixa de inscrição (mobile)
   (function() {
     const spyMap = { 'como-funciona': '#como-funciona', 'resultados': '#resultados', 'depoimentos': '#resultados',
-      'avaliacao': '#avaliacao', 'beneficio': '#avaliacao', 'mimos': '#mimos', 'encontro': '#mimos', 'faq': '#faq' };
+      'avaliacao': '#avaliacao', 'mimos': '#mimos', 'encontro': '#mimos', 'faq': '#faq' };
     const links = Array.from(document.querySelectorAll('#nav-links a'));
     function setActive(href) { links.forEach(a => a.classList.toggle('is-active', a.getAttribute('href') === href)); }
     if ('IntersectionObserver' in window) {
